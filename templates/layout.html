@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Sitio JV. Icon-->  	
+    <link  rel="icon"   href="{{ url_for('static', filename='img/logo.png') }}" type="image/png" />
+    <title>Sitio JV.</title>
+    <!--BOOTSTRAP 4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../static/css/main.css">
+<body>
+
+    <nav class="navbar navbar-light bg-light navbar-toggleable-sm sticky-top">
+
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            Sitio JV.
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="#navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="navbar-nav mr-auto ml-auto text-center">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="/">Inicio</span></a>
+                    <a class="nav-item nav-link" href="/about">Acerca de</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container p-4">
+        {% block content %}
+        <!--En esta parte va a ir un bloque de contenido el cual no se reutiliza-->
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+            <footer class="page-footer font-small teal pt-4">
+
+                <!-- Footer Text -->
+                <div class="container-fluid text-center text-md-left">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 col-sm-4 col-xs-4 mt-md-0 mt-3">
+
+                            <!-- Content -->
+                            <h5 class="text-uppercase font-weight-bold">Jose V.</h5>
+                            <p>Soy un egresado del CTP de Pavas, actualmente estudiante de la <a
+                                    href="https://www.uia.ac.cr/">UIA</a>, en Ing. en Desarrollo de Software.</p>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="clearfix w-100 d-md-none pb-3">
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 col-sm-4 col-xs-4 mb-md-0 mb-3">
+
+                            <!-- Content -->
+                            <h5 class="text-uppercase font-weight-bold">Contacto</h5>
+                            <p>+506 61210740</p>
+                            <p>+506 22135413</p>
+                            <p>varelajose851@gmail.com</p>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Footer Text -->
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="/"> Sitio JV.</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+
+        </div>
+    </div>
+    <!-- Footer -->
+
+
+
+    <!--JQUERY Scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--JQUERY Scripts-->
+
+</body>
+
+</html>
