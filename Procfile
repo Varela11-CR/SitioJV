@@ -1,1 +1,1 @@
-web: gunicorn index:app, socketio
+web: gunicorn --worker-class eventlet -w 1 module:app
