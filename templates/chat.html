@@ -1,6 +1,7 @@
 {% extends "layout.html" %}.
 
 {% block content %}
+
 <style>
     span {
         display: block;
@@ -9,8 +10,6 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-
-
         <div class="form-group">
 
             <label for="exampleFormControlTextarea1">
@@ -28,8 +27,6 @@
             <button id="send" type="button" class="btn btn-primary float-right">Enviar</button>
 
         </div>
-
-
     </div>
 </div>
 
@@ -41,6 +38,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+<!--JS code-->
 <script>
 
     const socket = io();
@@ -55,5 +53,6 @@
     });
 
 </script>
+<!--JS code-->
 
 {% endblock %}

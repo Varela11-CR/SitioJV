@@ -1,12 +1,14 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO, send
 
+#   An instance of the Flask class is created
 app = Flask(__name__)
+#   Flask-SocketIO is added to the application
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
 
-#Creacion de rutas
+#   Route creation
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -20,6 +22,7 @@ def chat():
     return render_template('chat.html')
 
 
+#   Creating the event handler
 @socketio.on('message')
 def handleMessage(msg):
     print('Message: ' + msg)

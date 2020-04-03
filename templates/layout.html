@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../static/css/main.css">
 <body>
 
+    <!--navbar-->
     <nav class="navbar navbar-light bg-light navbar-toggleable-sm sticky-top">
 
         <a class="navbar-brand" href="/">
@@ -44,25 +45,25 @@
         </div>
 
     </nav>
+    <!--navbar-->
 
+    <!--Content that will change in each template-->
     <div class="container p-4">
         {% block content %}
         <!--En esta parte va a ir un bloque de contenido el cual no se reutiliza-->
         {% endblock %}
     </div>
+    <!--Content that will change in each template-->
 
     <!-- Footer -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-
             <footer class="page-footer font-small teal pt-4">
 
                 <!-- Footer Text -->
                 <div class="container-fluid text-center text-md-left">
-
                     <!-- Grid row -->
                     <div class="row">
-
                         <!-- Grid column -->
                         <div class="col-md-6 col-sm-4 col-xs-4 mt-md-0 mt-3">
 
@@ -87,10 +88,8 @@
 
                         </div>
                         <!-- Grid column -->
-
                     </div>
                     <!-- Grid row -->
-
                 </div>
                 <!-- Footer Text -->
 
@@ -99,7 +98,6 @@
                     <a href="/"> Sitio JV.</a>
                 </div>
                 <!-- Copyright -->
-
             </footer>
 
         </div>
